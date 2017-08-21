@@ -11,6 +11,8 @@
 
 class AADLCDDriversInterface{
     public:
+	  virtual unsigned int getMaxHeight(void);
+	  virtual unsigned int getMaxWidth(void);
       virtual void clear(void);
       virtual void set_bgcolor(int color);
       virtual void goto_xy(byte x, byte y);
@@ -22,6 +24,7 @@ class AADLCDDriversInterface{
       virtual void v_line(byte x, byte y, byte h, unsigned int color);
       virtual void h_line(byte x, byte y, byte w, unsigned int color);
       virtual void rectangle(byte x, byte y, byte w, byte h, unsigned int color);
+      virtual void fill(byte x, byte y, byte w, byte h, unsigned int color);
       virtual void bitmap(byte x, byte y, const byte *bitmap, byte w, byte h, unsigned int color);
 
       virtual ~AADLCDDriversInterface(){}
